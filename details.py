@@ -35,7 +35,7 @@ start_time = time()
 for id in ids:
   URL_details = 'https://ingatlan.com/' + id
   page_details = Request(URL_details, headers={'User-Agent': 'Mozilla/5.0'})
-  sleep(randint(1,5))
+  sleep(randint(3,10))
   webpage_details = urlopen(page_details).read()
   soup_details = BeautifulSoup(webpage_details, 'html.parser')
 
