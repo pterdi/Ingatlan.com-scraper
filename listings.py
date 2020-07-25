@@ -38,7 +38,7 @@ pages = [str(i) for i in range(1,pagenumber+1)]
 for p in pages:
   URL = 'https://ingatlan.com/lista/kiado+lakas+budapest?page='+ p
   page = Request(URL , headers={'User-Agent': 'Mozilla/5.0'})
-  sleep(randint(1,6))
+  sleep(randint(3,10))
   webpage = urlopen(page).read()
   soup = BeautifulSoup(webpage, 'html.parser')
   flat_containers = soup.find_all('div', class_='listing__card')
