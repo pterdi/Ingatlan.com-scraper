@@ -23,7 +23,6 @@ size = []
 rooms = []
 balcony = []
 built = []
-utilities = []
 
 # Getting number of pages
 
