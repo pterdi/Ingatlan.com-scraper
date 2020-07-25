@@ -31,8 +31,7 @@ URL = 'https://ingatlan.com/lista/kiado+lakas+budapest'
 page = Request(URL , headers={'User-Agent': 'Mozilla/5.0'})
 webpage = urlopen(page).read()
 soup = BeautifulSoup(webpage, 'html.parser')
-#pagenumber = int(soup.find('div', class_='pagination__page-number').text.replace(' oldal','').replace('1 / ',''))
-pagenumber = 1
+pagenumber = int(soup.find('div', class_='pagination__page-number').text.replace(' oldal','').replace('1 / ',''))
 pages = [str(i) for i in range(1,pagenumber+1)]
 
 
